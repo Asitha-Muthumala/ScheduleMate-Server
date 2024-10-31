@@ -50,4 +50,9 @@ public class ServiceController {
         return ResponseEntity.ok(new APIResponse<>(ResponseCode.SUCCESS, serviceService.getServiceListByBusinessId(id,pageable)));
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<APIResponse<List<ServiceDto>>> searchServicesByName(@RequestParam String name) {
+        return ResponseEntity.ok(new APIResponse<>(ResponseCode.SUCCESS, serviceService.searchServicesByName(name)));
+    }
+
 }
