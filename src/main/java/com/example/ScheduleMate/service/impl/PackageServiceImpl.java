@@ -58,7 +58,6 @@ public class PackageServiceImpl implements PackageService {
         if (clientResult.isPresent()) {
 
             List<Packages> result = packagesRepository.getAllByClient(clientResult.get());
-            System.out.println(result.size());
             return result;
 
         } else {
