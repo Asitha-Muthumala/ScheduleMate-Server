@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/packages")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class PackageController {
     private final PackageService packageService;
 
